@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary: #1c351d;
+  --accent: #f0ba07;
+  --neutral: #333333;
+  --light: #ffffff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: var(--neutral);
+}
+
+/* Header */
+header {
+  background-color: var(--primary);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h5 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light);
+  margin: 1rem 0;
+}
+
+.head-links {
+  display: flex;
+  gap: 20px;
+}
+
+.head-links a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--light);
+  transition: color 0.3s;
+}
+
+.head-links a:hover, .head-links a:focus {
+  color: var(--accent);
+}
+
+/* Cover */
+.cover {
+  background-image: url("./images/cover2.jpg");
+  background-color: var(--primary);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 400px;
+  padding: 150px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cover h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  color: var(--light);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 0;
+}
+
+.cover h1 {
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-size: 2.5rem;
+  color: var(--light);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin: 10px 0;
+}
+
+.cover button {
+  background-color: var(--accent);
+  color: var(--neutral);
+  padding: 15px 20px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cover button:hover, .cover button:focus {
+  transform: scale(1.1);
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.social-media-container {
+  font-size: 30px;
+  margin-top: 50px;
+  display: flex;
+  gap: 20px;
+}
+
+.social-media-container a {
+  color: var(--light);
+  transition: all 0.3s ease;
+}
+
+.social-media-container a:hover, .social-media-container a:focus {
+  transform: scale(1.5);
+  color: var(--accent);
+}
+
+/* About */
+.about-section {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.about-section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-content p {
+  font-size: 1.125rem;
+  text-align: left;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.skill-badge {
+  background-color: var(--primary);
+  color: var(--light);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* Services */
+.service-section {
+  padding: 50px 20px;
+}
+
+.service-section h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.service-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.card-service {
+  width: calc((100% - 80px) / 3);
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.card-service:hover {
+  transform: scale(1.05);
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.card-service i {
+  font-size: 4rem;
+  transition: transform 0.5s ease;
+}
+
+.card-service:hover i {
+  transform: rotate(360deg);
+}
+
+.info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.info span[style] {
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: block;
+}
+
+.details-container {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details-container a {
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.details-container a:hover, .details-container a:focus {
+  color: var(--accent);
+}
+
+/* Projects */
+.project-section {
+  padding: 50px 20px;
+}
+
+.project-section h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.project-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.project-card {
+  width: calc((100% - 120px) / 4);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card h2 {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+.web-site-description {
+  display: block;
+  margin: 0 10px 10px;
+  color: #666;
+}
+
+.project-card .details {
+  display: block;
+  margin: 0 10px 10px;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: underline;
+  text-align: right;
+  transition: color 0.3s;
+}
+
+.project-card .details:hover, .project-card .details:focus {
+  color: var(--accent);
+}
+
+/* Contact */
+.contact {
+  padding: 50px 20px;
+}
+
+.contact h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form button {
+  background-color: var(--accent);
+  color: var(--neutral);
+  padding: 15px 20px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: center;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+  transform: scale(1.1);
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary);
+  color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  min-height: 60px;
+}
+
+.copy {
+  font-size: 1rem;
+}
+
+.social-media-footer a {
+  font-size: 1.25rem;
+  color: var(--light);
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.social-media-footer a:hover, .social-media-footer a:focus {
+  color: var(--accent);
+}
+
+/* Accessibility */
+a:focus, button:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+  .project-card {
+    width: calc((100% - 80px) / 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .cover {
+    padding: 100px 20px;
+  }
+  .card-service {
+    width: calc((100% - 40px) / 2);
+  }
+  .project-card {
+    width: calc((100% - 40px) / 2);
+  }
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-content p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .head-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .head-links a {
+    font-size: 0.875rem;
+  }
+  .cover {
+    padding: 50px 20px;
+    min-height: 300px;
+  }
+  .cover h1, .cover h2 {
+    font-size: 1.5rem;
+  }
+  .cover button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  .social-media-container {
+    width: 100%;
+    font-size: 24px;
+    justify-content: center;
+  }
+  .about-content img {
+    width: 150px;
+    height: 150px;
+  }
+  .card-service, .project-card {
+    width: 100%;
+  }
+  .contact-form {
+    padding: 0 10px;
+  }
+  .form-group input,
+  .form-group textarea {
+    font-size: 0.875rem;
+  }
+  .contact-form button {
+    padding: 10px 15px;
+    font-size: 1rem;
+  }
+  .social-media-footer a {
+    font-size: 1rem;
+    margin: 0 5px;
+  }
+}
